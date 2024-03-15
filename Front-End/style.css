@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    
+}
+
+body {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+}
+
+.Logo{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+.header {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5px 10%;
+    align-items: center;
+    z-index: 99999;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.navbar-logo {
+    height: 3rem;
+}
+
+.navbar a{
+    color: rgb(229, 219, 219);
+    text-decoration: none;
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem; 
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.navbar a:hover{
+    background-color: rgb(255, 0, 0);
+    color: black;
+
+
+}
+
+
+#check{
+    display: none;
+}
+
+.icon{
+    position: absolute;
+    right: 5%;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    display: none;
+}
+
+.container{
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.slides{
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: cover;
+  }
+  
+  .slides .slide{
+    display: none;
+  }
+  
+  .slides .slide img{
+    width: 100%;
+    animation-name: ease-out;
+    animation-duration: 3s;
+    background-size: cover;
+    background-position: cover;
+
+  }
+  
+  .slides .navigation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+
+  }
+  
+  .slides .navigation .prev, .slides .navigation .next{
+    cursor: pointer;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    background: rgba(0,0,0,0.2);
+    user-select: none;
+    transition: 0.6s ease;
+
+  }
+  
+  .slides .navigation .prev:hover, .slides .navigation .next:hover{
+    background: rgba(0,0,0,1);
+    background-size: cover;
+    background-position: cover;
+
+  }
+
+.text{
+    color: black;
+}
+.text h1{
+    color: white;
+    font-size: 25px;
+}
+
+.text h4{
+    color: black;
+}
+
+
+.hero a:hover{
+    background-color: brown;
+    
+}
+
+
+/*tampilan mobile*/
+@media (max-width: 992px){
+    .icon{/*icon stelah diperkecil*/
+        display: block;
+    }
+    /*icon hamburger tidak ditampilkan*/
+    #check:checked ~ .icon #menu-icon{
+        display: none;
+    }
+    /*icon silang dimatikan*/
+    .icon #close-icon{
+        display: none;
+    }
+    /*icon silang dinyalakan*/
+    #check:checked ~ .icon #close-icon{
+        display: block;
+    }
+    .hero a{
+         
+    }
+
+    .navbar{
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 40%;
+        height: 0px;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        background-color: black;
+        box-shadow: 0 0.5rem 1rem #ffff;
+        overflow: hidden;
+        transition: 0.3s ease;
+    }
+    .navbar a{
+        margin: 5px 20px 5px 20px;
+
+    }
+    #check:checked ~ .navbar{
+        height: 20rem;
+    }
+}
+
+@media (max-width: 440px){
+    .navbar{
+        width: 100%;
+    }
+}
+
+@keyframes ease-out {
+    from{opacity: 0.3}
+    to {opacity: 1}
+  }
+  
+  @media (max-width: 992px){
+    .slides .navigation .prev, .slides .navigation .next{
+      font-size: 18px;
+      padding: 13px;
+    }
+  }
+  
+  @media (max-width: 768px){
+    .slides .navigation .prev, .slides .navigation .next{
+      font-size: 15px;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 576px){
+    .slides .navigation .prev, .slides .navigation .next{
+      font-size: 12px;
+      padding: 7px;
+    }
+  }
+  
+  @media (max-width: 360px){
+    .slides .navigation .prev, .slides .navigation .next{
+      font-size: 11px;
+      padding: 6px;
+    }
+  }
+  
+
+
+

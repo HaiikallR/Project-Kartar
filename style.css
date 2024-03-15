@@ -1,0 +1,58 @@
+:root{
+    --primary:#b6895b;
+    --bg:#0101;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: white;
+    
+*/hero/*
+    height: 600px;
+    padding: 7rem 12%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: cover;
+
+}
+
+
+/*Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-nav a{
+    color: #000000;
+    font-size: 1.2 rem;
+    margin: 0 1rem;
+}
+
+    .navbar .navbar-nav a:hover{
+        color: whte;
+        background: red;
+        height: 30px;
+        width: 80px;
+        border-radius: 10px;
+        border: none;
+    }
